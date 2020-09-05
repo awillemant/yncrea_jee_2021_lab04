@@ -46,7 +46,7 @@ In the `yncrea.lab04.web.config` package, create the `WebConfig` class which imp
 - Annotate this class with `@ComponentScan` and configure this annotation to tell Spring to check the `yncrea.lab04.web.controller` package.
 - Override the `addResourceHandlers` with the following code : `registry.addResourceHandler("/webjars/**").addResourceLocations("/webjars/");`
 - Declare a bean of type `VelocityConfigurer`
-  - `"/WEB-INF/velocity"` is the path you should pass to the `ResourceLoaderPath` method of that bean.
+  - `"/WEB-INF/velocity"` is the path you should pass to the `setResourceLoaderPath` method of that bean.
 - Declare a bean of type `VelocityViewResolver`
   - `".vm"` is the suffix configured in that bean (check the available methods of that bean)
   
@@ -58,7 +58,9 @@ In the `yncrea.lab04.web.controller` package, create the `CompanyController` cla
   - it takes a parameter of type `ModelMap`
   - it returns a String
   - its implementation is quite simple, it loads all the companies from the DB with `findAllWithProjects` method from the service, puts it in the modelMap with the key `companies` then returns `"companiesList"` (it will load the provided template in `src/main/webapp/WEB-INF/velocity/companiesList.vm`)
-  - annotate this method with `@RequestMapping` with the path `/list`
+  - annotate this method in order to map this method with the current HTTP Request info:
+    - path : `/list` 
+    - verb : GET
   
 Check the provided files in the `resources` directory of that practice. Copy the files where they should be ;)
 
