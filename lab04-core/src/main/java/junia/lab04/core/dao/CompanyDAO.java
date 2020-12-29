@@ -1,8 +1,8 @@
-package yncrea.lab04.core.dao;
+package junia.lab04.core.dao;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
-import yncrea.lab04.core.entity.Company;
+import junia.lab04.core.entity.Company;
 
 import java.util.List;
 

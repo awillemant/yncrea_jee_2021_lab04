@@ -1,4 +1,4 @@
-package yncrea.lab04.core.config;
+package junia.lab04.core.config;
 
 import com.zaxxer.hikari.HikariConfig;
 import org.springframework.context.annotation.Bean;
@@ -6,12 +6,12 @@ import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 
 @Configuration
-@ComponentScan(basePackages = "yncrea.lab04.core.service")
+@ComponentScan(basePackages = "junia.lab04.core.service")
 public class AppConfig {
 
     public static final String DB_HOST = "localhost:3306";
 
-    public static final String DB_SCHEMA = "yncrea_lab03";
+    public static final String DB_SCHEMA = "junia_lab03";
 
     public static final String DB_USER = "root";
 

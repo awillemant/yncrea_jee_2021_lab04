@@ -1,4 +1,4 @@
-package yncrea.lab04.core.entity;
+package junia.lab04.core.entity;
 
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;

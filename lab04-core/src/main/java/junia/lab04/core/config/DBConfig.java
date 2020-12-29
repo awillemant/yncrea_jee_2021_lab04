@@ -1,4 +1,4 @@
-package yncrea.lab04.core.config;
+package junia.lab04.core.config;
 
 import com.zaxxer.hikari.HikariConfig;
 import com.zaxxer.hikari.HikariDataSource;
@@ -18,7 +18,7 @@ import java.sql.SQLException;
 
 @Configuration
 @EnableTransactionManagement
-@EnableJpaRepositories(basePackages = "yncrea.lab04.core.dao")
+@EnableJpaRepositories(basePackages = "junia.lab04.core.dao")
 public class DBConfig {
 
     @Bean(destroyMethod = "close")
@@ -49,7 +49,7 @@ public class DBConfig {
         LocalContainerEntityManagerFactoryBean factory = new LocalContainerEntityManagerFactoryBean();
         factory.setJpaVendorAdapter(vendorAdapter);
         factory.getJpaPropertyMap().put("hibernate.dialect", "org.hibernate.dialect.MySQL5Dialect");
-        factory.setPackagesToScan("yncrea.lab04.core.entity");
+        factory.setPackagesToScan("junia.lab04.core.entity");
         factory.setDataSource(dataSource);
         factory.afterPropertiesSet();
         return factory.getObject();

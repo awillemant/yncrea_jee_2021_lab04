@@ -7,7 +7,7 @@
     <artifactId>lab04-core</artifactId>
 
     <parent>
-        <groupId>yncrea.2021</groupId>
+        <groupId>junia.2021</groupId>
         <artifactId>lab04</artifactId>
         <version>0.0.1-SNAPSHOT</version>
     </parent>

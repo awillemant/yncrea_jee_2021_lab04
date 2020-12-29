@@ -1,9 +1,9 @@
-package yncrea.lab04.core.service;
+package junia.lab04.core.service;
 
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-import yncrea.lab04.core.dao.BusinessTypeDAO;
-import yncrea.lab04.core.entity.BusinessType;
+import junia.lab04.core.dao.BusinessTypeDAO;
+import junia.lab04.core.entity.BusinessType;
 
 @Service
 @Transactional

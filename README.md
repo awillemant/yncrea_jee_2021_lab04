@@ -7,7 +7,7 @@ Several goals for this homework:
 * You will write some logs
 
 ## DB 
-* Reuse the schema named `yncrea_lab03`
+* Reuse the schema named `junia_lab03`
 * We assume that your DB credentials are `root:root`
 
 ## lab04-web
@@ -30,7 +30,7 @@ For this module, you have to declare, in the `pom.xml` file, the following depen
 For this module, we won't write any `web.xml`  file, because everything will be configured with Java
 
 ### Initializer
-In the `yncrea.lab04.web` package, create a class named `Initializer` which extends `AbstractAnnotationConfigDispatcherServletInitializer` (_hey, that's what I call an accurate name!_)
+In the `junia.lab04.web` package, create a class named `Initializer` which extends `AbstractAnnotationConfigDispatcherServletInitializer` (_hey, that's what I call an accurate name!_)
 
 3 methods to implement:
 - `getRootConfigClasses()` which returns an array filled with `AppConfig` and `DBConfig`, theses classes are provided by the core module.
@@ -40,10 +40,10 @@ In the `yncrea.lab04.web` package, create a class named `Initializer` which exte
 If you wonder how to create arrays in Java, check this out : http://mathbits.com/MathBits/Java/arrays/Initialize.htm
 
 ### WebConfig
-In the `yncrea.lab04.web.config` package, create the `WebConfig` class which implements `WebMvcConfigurer`.
+In the `junia.lab04.web.config` package, create the `WebConfig` class which implements `WebMvcConfigurer`.
 - Annotate this class with `@EnableWebMVC` in order to start Spring WebMVC.
 - Annotate this class with `@Configuration`
-- Annotate this class with `@ComponentScan` and configure this annotation to tell Spring to check the `yncrea.lab04.web.controller` package.
+- Annotate this class with `@ComponentScan` and configure this annotation to tell Spring to check the `junia.lab04.web.controller` package.
 - Override the `addResourceHandlers` with the following code : `registry.addResourceHandler("/webjars/**").addResourceLocations("/webjars/");`
 - Declare a bean of type `VelocityConfigurer`
   - `"/WEB-INF/velocity"` is the path you should pass to the `setResourceLoaderPath` method of that bean.
@@ -51,7 +51,7 @@ In the `yncrea.lab04.web.config` package, create the `WebConfig` class which imp
   - `".vm"` is the suffix configured in that bean (check the available methods of that bean)
   
 ### CompanyController
-In the `yncrea.lab04.web.controller` package, create the `CompanyController` class.
+In the `junia.lab04.web.controller` package, create the `CompanyController` class.
 - Annotate this class with `@Controller`
 - Inject the `CompanyService`
 - Create a method `getListOfCompanies`
