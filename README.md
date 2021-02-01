@@ -41,7 +41,7 @@ If you wonder how to create arrays in Java, check this out : http://mathbits.com
 
 ### WebConfig
 In the `junia.lab04.web.config` package, create the `WebConfig` class which implements `WebMvcConfigurer`.
-- Annotate this class with `@EnableWebMVC` in order to start Spring WebMVC.
+- Annotate this class with `@EnableWebMvc` in order to start Spring WebMVC.
 - Annotate this class with `@Configuration`
 - Annotate this class with `@ComponentScan` and configure this annotation to tell Spring to check the `junia.lab04.web.controller` package.
 - Override the `addResourceHandlers` with the following code : `registry.addResourceHandler("/webjars/**").addResourceLocations("/webjars/");`
