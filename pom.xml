@@ -11,6 +11,7 @@
 
     <modules>
         <module>lab04-core</module>
+        <module>lab04-web</module>
     </modules>
          
     <properties>
